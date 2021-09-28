@@ -3,28 +3,42 @@
 
 
 def order(values: list = None) -> list:
-    if values is None:
-        # TODO: demander les valeurs ici
-        pass
+    input_usager = input('Entrer 10 valeurs ici : ')
 
-    return []
+    return sorted(input_usager.split())
 
 
-def anagrams(words: list = None) -> bool:
-    if words is None:
-        # TODO: demander les mots ici
-        pass
+#def anagrams(words: list = None) -> bool:
+#    if words is None:
+ #       words = input('entrer 2 anagrammes ici : ').split()
+#
+ #       ana_1 = list(words[0])
+  #      ana_2 = list(words[1])
 
-    return False
+    return sorted(ana_2) == sorted(ana_1)
+
+
 
 
 def contains_doubles(items: list) -> bool:
-    return False
+
+    my_list = [3, 3, 5, 6, 1, 1]
+    print(my_list.sort())
+    for i in my_list:
+        if i == i+1:
+            return False
+        else: return True
+
+
+
 
 
 def best_grades(student_grades: dict) -> dict:
     # TODO: Retourner un dictionnaire contenant le nom de l'étudiant ayant la meilleure moyenne ainsi que sa moyenne
     return {}
+
+
+
 
 
 def frequence(sentence: str) -> dict:
@@ -46,10 +60,12 @@ def print_recipe(ingredients) -> None:
 
 def main() -> None:
     print(f"On essaie d'ordonner les valeurs...")
-    order()
+    values = order()
+    print(values)
 
-    print(f"On vérifie les anagrammes...")
-    anagrams()
+#    print(f"On vérifie les anagrammes...")
+#    is_anagram = anagrams()
+#    print(is_anagram)
 
     my_list = [3, 3, 5, 6, 1, 1]
     print(f"Ma liste contient-elle des doublons? {contains_doubles(my_list)}")
